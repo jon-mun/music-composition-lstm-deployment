@@ -1,3 +1,5 @@
+utilities/output
+utilities/output/*
 # Python build
 .eggs/
 gradio.egg-info
