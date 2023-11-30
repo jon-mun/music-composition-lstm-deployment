@@ -32,8 +32,10 @@ def parse_midi(midi_file):
     return notes, durations
 
 def midi_to_wav(midi_file):
-    fs = FluidSynth()
+    soundfont_file = "utilities/GeneralUser GS v1.471.sf2"
+
+    fs = FluidSynth(sound_font=soundfont_file)
     wav_file = midi_file.name.replace(".mid", ".wav")
     fs.midi_to_audio(midi_file, wav_file)
-    
+
     return wav_file
